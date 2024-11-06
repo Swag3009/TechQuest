@@ -25,7 +25,8 @@
 | **M-e**                             | Move to the end of the sentence                                                            |
 | **M-Shift-<**                       | Move to the beginning of the whole text                                                    |
 | **M-Shift->**                       | Move to the end of the whole text                                                          |
-| **C-x C-t**                         | Line swapping                                                                              |
+| **C-t**                         | Line swapping                                                                              |
+| **M-t**                         | Line swapping                                                                              |
 | **C-u *digits* *command***           | Repeat command with numeric argument                                                       |
 | **C-u *line number* M-g M-g**       | Jump to the line number                                                                    |
 | **M-g M-g *number***                | Go to line                                                                                 |
