@@ -1,6 +1,6 @@
 # Basics
 ## Hoisting 
-Hoisting is a Javascript mechanism where variables and function declarations are moved to the top of their scope befoer code execution.
+Hoisting is a Javascript mechanism where variables and function declarations are moved to the top of their scope before code execution.
 
 ## Let and Const 
 **let :** 
@@ -18,7 +18,8 @@ let name = "Swagatika Mohapatra";
 3. Same variable can be declared in different blocks without throwing error, because both instances are treated as different variables due to their different scope. 
 4. *let* declarations are hoisted to the top. 
 5. Unlike *var*, the *let* keyword is not initialized. If we try to use it before initializing it, it will throw *Reference Error*. 
-**cosnt :**
+
+**const :**
 1. It is block scoped.
 2. *const* declarations are hoisted to the top but are not initialized. 
 3. It can not be updated or re-declared. Therefore it must be initialized at the time of declaration. 
@@ -74,7 +75,7 @@ tagfunc`Hello ${name}! Would you like to have ${beverage}`;
 */
 ```
 ## Function
-Function is a block of code designed to perform a perticular task. Function is used for reusability, readability, easy testing, abstraction, collaboration, extensibility and modularisation. 
+Function is a block of code designed to perform a particular task. Function is used for reusability, readability, easy testing, abstraction, collaboration, extensibility and modularisation. 
 - In js, functions are first-class citizens, means they can be treated as values and passed around like any other variable.
 - *Parameter* - Parameters are the references to values that will be used in a function. 
 - *Arguments* - Arguments are the actual values passed to the functions when it is called in the programe. 
@@ -86,7 +87,6 @@ function add(num1, num2){
 add(2, 3);
 // here 2 and 3 are arguments
 ```
-
 ### Anonymous Function
 Anonymous function is function that does not have a name. It is usually created for specific tasks and are often assigned to variables or used as arguments  for other functions. It is often used in situations where you don't need to reuse the function outside its immediate context. 
 - Anonymous function is not accessible after it's initial creation. Therefore often you need to assign it to a variable. 
@@ -115,9 +115,9 @@ It is a function that is called immediately after it is defined. It is used to c
 ```
 ### Arrow function
 It allows to write shorter function syntax.
-- Arrow functions don't have their own binding to **this**, **argumens** or **super** and should not be used as **methods**. 
+- Arrow functions don't have their own binding to **this**, **arguments** or **super** and should not be used as **methods**. 
 - Arrow functions cannot be used as contructors. Calling them with new throws TypeError. They also don't have access to the **new.target** keyword. 
-- Arrow fucntions cannot use **yeild** within thier body and cannot be created as generator functions. 
+- Arrow fucntions cannot use **yield** within thier body and cannot be created as generator functions. 
 ```js
 () => expression
 
@@ -163,44 +163,8 @@ async (param1, param2, ...paramN) => {
 
 ### Higher Order Function
 Higher order functions are fucntions that take one or more functions as arguments  or return a function as their result. 
-#### map() 
-- It takes an array of values and applies a tranformation to each value in the array. 
-- It does not mutate the original array. 
-- It creates a new array. 
-```js
-const arr = [1, 2, 3, 4, 5];
-const output = arr.map((num) => num += 10)
-console.log(arr); // [1, 2, 3, 4, 5]
-console.log(output); // [11, 12, 13, 14, 15]
-```
-#### filter() 
-- It takes an array and returns a new array with only the values that meet certain cirtera. 
-- It does not mutate the original array.
-- It select a subset of data from an array based on certain critera.
-```js
-const arr = [1, 2, 3, 4, 5];
-const output = arr.filter((num) => num % 2) // filter out odd numbers
-console.log(arr); // [1, 2, 3, 4, 5]
-console.log(output); // [1, 3, 5]
-```
-#### reduce()
-- This method iterate the array and reduces array's values into one value. 
-- Accumulator parameter is the single value that will be returned by the method. 
-- currentValue parameter is the item from the array which will change in each iteration.
-- It iterates over each element in the array, and each iteration returns a single value, which is the accumulator. When the iteration is finished, the accumulator value will be returned from the method. 
-- If we don't add the initial accumulator value explicitly, then the method will take the first item in the array as the initial accumulator value. 
-- It is used for
-  - Summarizing values into a single value
-  - Grouping sililar items together
-  - Removing duplicates from an array
-```js
-// Syntax
-Array.reduce((accumulator, item, index, array) => {
-  // TODO: Define the process for each iteration here
-}, initialAccumulatorValue)
-```
 ## Destructuring 
-Destructureing assignment is a js expression that allows to upack values of array, properties of objects into distinct variable data.
+Destructureing assignment is a js expression that allows to unpack values of array, properties of objects into distinct variable data.
 ### Object Destructuring
 Object destructuing is the syntax for extracting values from an object prperty and assigning them to a variable. 
 ```js
@@ -432,6 +396,16 @@ array.splice(index, howMany, element1, element2, ...., elementN);
 // howMany - (Optional) number of elements to be removed
 // elements - Elements that you want to insert
 ```
+- **reduce** -> The reduce() method of Array instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
+```js
+//syntax
+const Accumulation = array.reduce(
+  (accumulator, currentValue, currentIndex, array) => {
+	  return value;
+  },
+  initialValue,
+);
+```
 
 ### Non-Destructive Array Methods
 Non-destructive array methods in JavaScript return a new array or value without modifying the original array. When you want to preserve the original array while assigning the new output to a new array, you can use these non destructive array method.
@@ -468,8 +442,43 @@ array.some(callback);
 ```
 - **forEach** -> The forEach method is a built-in array method in JavaScript used to execute a provided function once for each array element. Unlike loops, it does not return a new array and doesn’t work with break or continue statements.
 
-- **for...in** -> The for...of loop is used to iterate over each element in the array without needing to reference the index.
-
+- **for...of** -> The for...of loop is used to iterate over each element in the array without needing to reference the index.
+#### map() 
+- It takes an array of values and applies a tranformation to each value in the array. 
+- It does not mutate the original array. 
+- It creates a new array. 
+```js
+const arr = [1, 2, 3, 4, 5];
+const output = arr.map((num) => num += 10)
+console.log(arr); // [1, 2, 3, 4, 5]
+console.log(output); // [11, 12, 13, 14, 15]
+```
+#### filter() 
+- It takes an array and returns a new array with only the values that meet certain cirtera. 
+- It does not mutate the original array.
+- It select a subset of data from an array based on certain critera.
+```js
+const arr = [1, 2, 3, 4, 5];
+const output = arr.filter((num) => num % 2) // filter out odd numbers
+console.log(arr); // [1, 2, 3, 4, 5]
+console.log(output); // [1, 3, 5]
+```
+#### reduce()
+- This method iterate the array and reduces array's values into one value. 
+- Accumulator parameter is the single value that will be returned by the method. 
+- currentValue parameter is the item from the array which will change in each iteration.
+- It iterates over each element in the array, and each iteration returns a single value, which is the accumulator. When the iteration is finished, the accumulator value will be returned from the method. 
+- If we don't add the initial accumulator value explicitly, then the method will take the first item in the array as the initial accumulator value. 
+- It is used for
+  - Summarizing values into a single value
+  - Grouping sililar items together
+  - Removing duplicates from an array
+```js
+// Syntax
+Array.reduce((accumulator, item, index, array) => {
+  // TODO: Define the process for each iteration here
+}, initialAccumulatorValue)
+```
 ## Objects
 - In js object helps to group values with similar characteristic together to make code more readable, organized and operable.
 - An object is a data type that can take in collections of tkey value pairs.
