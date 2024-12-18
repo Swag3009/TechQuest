@@ -1,24 +1,24 @@
 # JavaScript Learning Path
 
 ## 1. Basics
-- [ ] Let and Const
-- [ ] Template Literals
-- [ ] Arrow Functions
-  - [ ] This and Arrow Function
-- [ ] Closures
-- [ ] Destructuring
-  - [ ] Array and Object Destructuring
-- [ ] Spread and Rest Operators
-- [ ] Map and Set
-- [ ] Datatype Conversion
-- [ ] Arrays
-- [ ] Objects
-- [ ] Functions
-  - [ ] Functions with Objects and Arrays
-- [ ] High-order Array Loops (map, filter, reduce)
+- [x] Let and Const
+- [x] Template Literals
+- [x] Arrow Functions
+  - [x] This and Arrow Function
+- [x] Closures
+- [x] Destructuring
+  - [x] Array and Object Destructuring
+- [x] Spread and Rest Operators
+- [x] Map and Set
+- [x] Datatype Conversion
+- [x] Arrays
+- [x] Objects
+- [x] Functions
+  - [x] Functions with Objects and Arrays
+- [x] High-order Array Loops (map, filter, reduce)
 
 ## 2. Asynchronous JavaScript
-- [ ] Callbacks
+- [x] Callbacks
 - [ ] Event Loops
 - [ ] Asynchronous operations using Promises
 - [ ] Asynchronous using Async/Await
@@ -31,12 +31,12 @@
 - [ ] Events in JavaScript
 
 ## 3. Object-Oriented JavaScript
-- [ ] Prototypes
-  - [ ] Inheritance using Prototypes
-  - [ ] Call and This
+- [x] Prototypes
+  - [x] Inheritance using Prototypes
+  - [x] Call and This
   - [ ] Promise and Prototype
-- [ ] Classes
-  - [ ] Constructor and Static Methods
+- [x] Classes
+  - [x] Constructor and Static Methods
 
 ## 4. Advanced Concepts
 - [ ] Promises
